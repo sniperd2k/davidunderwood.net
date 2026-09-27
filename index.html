@@ -226,6 +226,116 @@
       font-family: "Courier New", monospace;
       margin-bottom: 10px;
     }
+
+    .crew-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 10px;
+    }
+    .crew-card {
+      flex: 1 1 160px;
+      max-width: 220px;
+      background: #111;
+      border: 4px groove #ff00aa;
+      padding: 4px;
+      cursor: zoom-in;
+      text-decoration: none;
+      color: #00ffff;
+      font-family: Tahoma, sans-serif;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+    .crew-card img {
+      width: 100%;
+      background: #fff;
+    }
+    .crew-card:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 2px;
+    }
+    .crew-card .cap {
+      display: block;
+      padding: 4px 2px 2px;
+      color: #ffff66;
+    }
+    .hero-shot { position: relative; }
+    .hero-shot .zoom-hint {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background: rgba(0,0,0,0.75);
+      color: #ffff00;
+      font: bold 0.75rem Tahoma, sans-serif;
+      padding: 4px 8px;
+      border: 2px outset #fff;
+      pointer-events: none;
+    }
+    .lb-open { cursor: zoom-in; }
+    .lightbox[hidden] { display: none !important; }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,40,0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .lightbox-dialog {
+      position: relative;
+      max-width: min(960px, 100%);
+      max-height: 92vh;
+      background: var(--panel);
+      border: 4px solid;
+      border-color: #ffffff #404040 #404040 #ffffff;
+      box-shadow: 6px 6px 0 #000;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .lightbox-dialog img {
+      max-height: min(78vh, 820px);
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto;
+      background: #fff;
+    }
+    .lightbox-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      background: linear-gradient(90deg, #000080, #1084d0);
+      color: #fff;
+      font: bold 13px Tahoma, sans-serif;
+      padding: 4px 8px;
+    }
+    .lightbox-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .lightbox-actions button {
+      min-height: var(--touch);
+      min-width: var(--touch);
+      padding: 6px 14px;
+      font: bold 0.9rem Tahoma, sans-serif;
+      background: var(--panel);
+      border: 3px outset #fff;
+      cursor: pointer;
+    }
+    .lightbox-actions button:active { border-style: inset; }
+    .lightbox-caption {
+      margin: 0;
+      text-align: center;
+      font: 0.85rem Tahoma, sans-serif;
+      color: #003366;
+    }
     @media (max-width: 640px) {
       .hero-table, .hero-table tbody, .hero-table tr, .hero-table td {
         display: block;
@@ -253,20 +363,23 @@
           <tr>
             <td style="width:58%">
               <figure class="hero-shot">
-                <picture>
-                  <source type="image/webp" srcset="assets/dave-snowboard.webp" />
-                  <img
-                    src="assets/dave-snowboard.jpg"
-                    width="1200"
-                    height="800"
-                    alt="David Underwood mid-air on a snowboard, orange Never Summer board against an overcast New Hampshire sky"
-                    fetchpriority="high"
-                    decoding="async"
-                  />
-                </picture>
+                <a class="lb-open" href="assets/dave-snowboard.jpg" data-lb-index="1" aria-label="Open shred photo in lightbox">
+                  <picture>
+                    <source type="image/webp" srcset="assets/dave-snowboard.webp" />
+                    <img
+                      src="assets/dave-snowboard.jpg"
+                      width="1200"
+                      height="800"
+                      alt="David Underwood mid-air on a snowboard, orange Never Summer board against an overcast New Hampshire sky"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
+                  </picture>
+                  <span class="zoom-hint" aria-hidden="true">🔍 click · lightbox</span>
+                </a>
               </figure>
               <p style="margin:8px 0 0; font-size:0.8rem; color:#00ffff; font-family:Tahoma,sans-serif;">
-                ▲ Personal photo — Pats Peak energy. No Unsplash. Just shred.
+                ▲ Personal photo — Pats Peak energy. No Unsplash. Just shred. Click for Crew lightbox.
               </p>
             </td>
             <td>
@@ -289,12 +402,51 @@
               </p>
               <div class="nav" role="navigation" aria-label="Main">
                 <a href="resume.html">📄 Resume</a>
+                <a href="#crew">💀 Crew</a>
                 <a href="#guestbook">✍️ Guestbook</a>
                 <a href="#about">ℹ About</a>
               </div>
             </td>
           </tr>
         </table>
+
+
+        <div id="crew" class="guestbook" style="background:#1a001a; border-color:#ff00ff; color:#ffccff;">
+          <h2 style="color:#ff66ff;">💀 Pats Peak Crew · lightbox</h2>
+          <p style="margin:0 0 0.5rem; font-family:Tahoma,sans-serif; color:#eee;">
+            Official PPC mark + the shred shot. Click either thumb — arrow keys / Esc work in the lightbox.
+          </p>
+          <div class="crew-strip" id="crew-gallery">
+            <a class="crew-card lb-open" href="assets/snowboard_PPC.jpg" data-lb-index="0" aria-label="Open PPC crew emblem in lightbox">
+              <picture>
+                <source type="image/webp" srcset="assets/snowboard_PPC-thumb.webp" />
+                <img
+                  src="assets/snowboard_PPC-thumb.jpg"
+                  width="320"
+                  height="214"
+                  alt="Pats Peak Crew emblem — skull with PPC on the forehead and crossed snowboards"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <span class="cap">PPC emblem ★</span>
+            </a>
+            <a class="crew-card lb-open" href="assets/dave-snowboard.jpg" data-lb-index="1" aria-label="Open shred photo in lightbox">
+              <picture>
+                <source type="image/webp" srcset="assets/dave-snowboard.webp" />
+                <img
+                  src="assets/dave-snowboard.jpg"
+                  width="320"
+                  height="213"
+                  alt="David Underwood mid-air on a snowboard"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <span class="cap">Shred shot ★</span>
+            </a>
+          </div>
+        </div>
 
         <div id="about" class="guestbook" style="background:#e8f7ff; border-color:#003366; color:#003366;">
           <h2 style="color:#003366;">About this site</h2>
@@ -326,5 +478,87 @@
       <a href="https://github.com/sniperd2k/davidunderwood.net">source</a>
     </p>
   </div>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Crew photo lightbox">
+    <div class="lightbox-dialog">
+      <div class="lightbox-bar">
+        <span id="lb-title">Crew lightbox</span>
+        <button type="button" id="lb-close-x" aria-label="Close lightbox" style="width:22px;height:18px;line-height:14px;padding:0;background:#c0c0c0;border:2px solid;border-color:#fff #404040 #404040 #fff;font-weight:bold;cursor:pointer;">×</button>
+      </div>
+      <img id="lb-img" src="" alt="" width="1404" height="940" />
+      <p class="lightbox-caption" id="lb-caption"></p>
+      <div class="lightbox-actions">
+        <button type="button" id="lb-prev" aria-label="Previous image">◀ Prev</button>
+        <button type="button" id="lb-close" aria-label="Close lightbox">Close</button>
+        <button type="button" id="lb-next" aria-label="Next image">Next ▶</button>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var items = [
+      {
+        src: "assets/snowboard_PPC.webp",
+        fallback: "assets/snowboard_PPC.jpg",
+        alt: "Pats Peak Crew emblem — skull with PPC on the forehead and crossed snowboards",
+        caption: "Pats Peak Crew (PPC) — skull & crossed boards"
+      },
+      {
+        src: "assets/dave-snowboard.webp",
+        fallback: "assets/dave-snowboard.jpg",
+        alt: "David Underwood mid-air on a snowboard, orange Never Summer board against an overcast New Hampshire sky",
+        caption: "Personal shred shot — Pats Peak energy"
+      }
+    ];
+    var lb = document.getElementById("lightbox");
+    var img = document.getElementById("lb-img");
+    var cap = document.getElementById("lb-caption");
+    var title = document.getElementById("lb-title");
+    var idx = 0;
+    var lastFocus = null;
+
+    function show(i) {
+      idx = (i + items.length) % items.length;
+      var it = items[idx];
+      img.onerror = function () { img.onerror = null; img.src = it.fallback; };
+      img.src = it.src;
+      img.alt = it.alt;
+      cap.textContent = it.caption + " (" + (idx + 1) + "/" + items.length + ")";
+      title.textContent = "Crew lightbox — " + (idx + 1) + "/" + items.length;
+    }
+    function open(i) {
+      lastFocus = document.activeElement;
+      show(i);
+      lb.hidden = false;
+      document.body.style.overflow = "hidden";
+      document.getElementById("lb-close").focus();
+    }
+    function close() {
+      lb.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    document.querySelectorAll(".lb-open").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        var n = parseInt(el.getAttribute("data-lb-index") || "0", 10);
+        open(n);
+      });
+    });
+    document.getElementById("lb-prev").addEventListener("click", function () { show(idx - 1); });
+    document.getElementById("lb-next").addEventListener("click", function () { show(idx + 1); });
+    document.getElementById("lb-close").addEventListener("click", close);
+    document.getElementById("lb-close-x").addEventListener("click", close);
+    lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (lb.hidden) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") show(idx - 1);
+      else if (e.key === "ArrowRight") show(idx + 1);
+    });
+  })();
+  </script>
+
 </body>
 </html>
