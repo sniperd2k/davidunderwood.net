@@ -220,7 +220,7 @@
   <link rel="canonical" href="https://davidunderwood.net/guestbook.aspx" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-49HF3RFVKP"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-49HF3RFVKP');</script>
-  <link rel="stylesheet" href="assets/myspace.css" />
+  <link rel="stylesheet" href="assets/earlyweb.css" />
   <style>
     .flash-ok { background:#cfc; border:3px outset #0a0; color:#030; padding:8px; margin:8px 0; font-family:Tahoma,sans-serif; }
     .flash-err { background:#fcc; border:3px outset #a00; color:#400; padding:8px; margin:8px 0; font-family:Tahoma,sans-serif; }
@@ -244,12 +244,12 @@
     .anti { font-size:0.8rem; color:#444; font-family:Tahoma,sans-serif; margin-top:10px; }
   </style>
 </head>
-<body class="myspace">
+<body class="earlyweb">
   <a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
     <marquee behavior="scroll" direction="left" scrollamount="5">★ GUESTBOOK ★ Sign it ★ PPC 4 LIFE ★ Bots will be yeeted off the chairlift ★</marquee>
     <div class="win95" id="main">
-      <div class="titlebar"><span>📖 guestbook.aspx — Pats Peak Crew lodge book</span><span class="btns" aria-hidden="true"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="titlebar"><span>📖 guestbook.aspx — Pats Peak Crew lodge book</span><span class="btns" aria-hidden="true"><span class="fun-click" data-fun-sound="click" data-fun-anim="jiggling">_</span><span class="fun-click" data-fun-sound="boop" data-fun-anim="spinning">□</span><span class="fun-click" data-fun-sound="error" data-fun-anim="wobbling">×</span></span></div>
       <div class="panel-body">
         <div class="nav" role="navigation">
           <a href="./">🏠 Home</a>
@@ -296,7 +296,7 @@
     </div>
     <p class="footer">© David Underwood · <a href="./">Home</a> · PPC 4 LIFE</p>
   </div>
-  <script src="assets/myspace-audio.js"></script>
+  <script src="assets/earlyweb-audio.js"></script>
   <script>
     document.getElementById("gb-form").addEventListener("submit", function () {
       if (window.DUAudio) DUAudio.play("guestbook");
