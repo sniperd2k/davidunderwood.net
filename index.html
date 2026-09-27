@@ -248,7 +248,7 @@
                 <b style="color:#ff00ff;">Pats Peak Crew</b>. Lace up. Hit refresh. Stay stoked.
               </p>
               <div class="badges" aria-label="cred badges">
-                <span class="badge blue" role="button" tabindex="0">❄ AASI</span>
+                <a class="badge blue" id="btn-aasi" href="https://easternsnowpros.org/" target="_blank" rel="noopener noreferrer">❄ AASI</a>
                 <button type="button" class="badge pink" id="btn-crew" aria-haspopup="dialog" aria-controls="lightbox">
                   🏔 Pats Peak Crew
                 </button>
@@ -404,7 +404,12 @@
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openCrew(); }
     });
 
-    document.getElementById("btn-ppc4life").addEventListener("click", function () {
+        var aasiBtn = document.getElementById("btn-aasi");
+    if (aasiBtn) aasiBtn.addEventListener("click", function () {
+      if (window.DUAudio) DUAudio.play("pop");
+    });
+
+document.getElementById("btn-ppc4life").addEventListener("click", function () {
       if (window.DUAudio) DUAudio.play("success");
     });
 
