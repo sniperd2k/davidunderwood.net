@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>David Underwood — Professional Slope Whisperer</title>
+  <meta name="description" content="David Underwood — Professional Slope Whisperer / Cards, Kegs &amp; Commits. Funny one-page resume." />
+  <meta name="theme-color" content="#0033cc" />
+  <link rel="canonical" href="https://davidunderwood.net/resume.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://davidunderwood.net/resume.html" />
+  <meta property="og:title" content="David Underwood — Professional Slope Whisperer" />
+  <meta property="og:description" content="If it slides, shuffles, ferments, or deploys, I’ve got notes." />
+  <meta property="og:image" content="https://davidunderwood.net/assets/dave-snowboard.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      --bg: #000080;
+      --panel: #c0c0c0;
+      --hot: #ff00ff;
+      --lime: #00ff00;
+      --cyan: #00ffff;
+      --yellow: #ffff00;
+      --ink: #000000;
+      --white: #ffffff;
+      --touch: 44px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      marquee, .blink { animation: none !important; }
+    }
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", "Comic Sans", "Trebuchet MS", Geneva, Tahoma, sans-serif;
+      color: var(--yellow);
+      background:
+        radial-gradient(circle at 20% 20%, #220066 0, transparent 40%),
+        radial-gradient(circle at 80% 0%, #004400 0, transparent 35%),
+        repeating-linear-gradient(45deg, #000066 0 12px, #000080 12px 24px);
+      min-height: 100vh;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--cyan); }
+    a:visited { color: #cc99ff; }
+    a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+    .skip {
+      position: absolute; left: -9999px; top: auto;
+      width: 1px; height: 1px; overflow: hidden;
+    }
+    .skip:focus {
+      position: fixed; left: 8px; top: 8px; z-index: 99;
+      width: auto; height: auto; padding: 10px 14px;
+      background: var(--yellow); color: #000; font-weight: bold;
+    }
+    .wrap {
+      width: min(820px, 100% - 1.25rem);
+      margin: 0.75rem auto 2rem;
+    }
+    .win95 {
+      background: var(--panel);
+      color: var(--ink);
+      border: 3px solid;
+      border-color: #ffffff #404040 #404040 #ffffff;
+      box-shadow: 4px 4px 0 #000;
+    }
+    .titlebar {
+      background: linear-gradient(90deg, #000080, #1084d0);
+      color: #fff;
+      font-weight: bold;
+      font-family: "MS Sans Serif", Tahoma, sans-serif;
+      font-size: 13px;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .titlebar .btns span {
+      display: inline-block;
+      width: 16px; height: 14px;
+      background: var(--panel);
+      border: 2px solid;
+      border-color: #fff #404040 #404040 #fff;
+      color: #000;
+      font-size: 10px;
+      line-height: 10px;
+      text-align: center;
+      margin-left: 2px;
+    }
+    .panel-body { padding: 14px 16px 18px; }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+    }
+    .nav a {
+      min-height: var(--touch);
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      background: #0000aa;
+      color: #ffff00 !important;
+      border: 3px outset #6699ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav a:active { border-style: inset; }
+    .resume-header {
+      background: #000;
+      color: var(--lime);
+      border: 4px ridge #ff00ff;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .resume-header h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.35rem, 5vw, 2rem);
+      color: var(--hot);
+      text-shadow: 2px 2px 0 #000, -1px -1px 0 #00ffff;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      margin: 0 0 0.5rem;
+      color: var(--yellow);
+      font-weight: bold;
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+    }
+    .tagline {
+      margin: 0;
+      color: var(--cyan);
+      font-family: Tahoma, Geneva, sans-serif;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+    .blink { animation: blink 1.1s step-start infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .section {
+      background: #fff8dc;
+      border: 4px double #800000;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      color: #400000;
+    }
+    .section.skills {
+      background: #e8f7ff;
+      border-color: #003366;
+      color: #003366;
+    }
+    .section.edu {
+      background: #f0ffe8;
+      border-color: #226600;
+      color: #226600;
+    }
+    .section.refs {
+      background: #fff0f8;
+      border-color: #880066;
+      color: #660044;
+    }
+    .section h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.15rem;
+      color: inherit;
+      border-bottom: 2px dashed currentColor;
+      padding-bottom: 4px;
+      font-family: Tahoma, Geneva, sans-serif;
+    }
+    .job {
+      margin: 0 0 1rem;
+      font-family: Tahoma, Geneva, sans-serif;
+      font-size: 0.95rem;
+    }
+    .job:last-child { margin-bottom: 0; }
+    .job h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.02rem;
+      color: #000080;
+    }
+    .job .role {
+      font-weight: bold;
+      color: #800080;
+    }
+    .job .metrics {
+      margin: 0.35rem 0 0;
+      padding-left: 1.1rem;
+    }
+    .job .metrics li { margin-bottom: 0.2rem; }
+    .skill-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-family: Tahoma, Geneva, sans-serif;
+    }
+    .skill-list li {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 6px 12px;
+      border: 3px outset #fff;
+      background: linear-gradient(#ffff99, #ff9900);
+      color: #000;
+      font-weight: bold;
+      font-size: 0.85rem;
+      box-shadow: 2px 2px 0 #000;
+    }
+    .edu-list, .plain {
+      margin: 0;
+      padding-left: 1.2rem;
+      font-family: Tahoma, Geneva, sans-serif;
+      font-size: 0.95rem;
+    }
+    .footer {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaddff;
+      font-family: Tahoma, sans-serif;
+    }
+    .footer a { color: #ffff66; }
+    marquee {
+      background: #000;
+      color: var(--lime);
+      border: 2px solid var(--hot);
+      padding: 4px 0;
+      font-family: "Courier New", monospace;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 0.75rem, 820px); }
+      body { font-size: 16px; }
+      .panel-body { padding: 10px 10px 14px; }
+    }
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      marquee, .nav, .titlebar .btns { display: none; }
+      .wrap { width: 100%; margin: 0; }
+      .win95 { box-shadow: none; border: 1px solid #999; }
+      .titlebar { background: #333; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .section, .resume-header { break-inside: avoid; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <marquee behavior="scroll" direction="left" scrollamount="5" aria-label="Resume ticker">
+      ★ DAVID UNDERWOOD — CURRICULUM VITAE (MOSTLY TRUE) ★ Slopes · Cards · Kegs · Boards · Discs · Commits ★ Best viewed in Netscape Navigator or Mobile Chrome ★
+    </marquee>
+
+    <div class="win95" id="main">
+      <div class="titlebar">
+        <span>🏂 resume.html — Professional Slope Whisperer</span>
+        <span class="btns" aria-hidden="true"><span>_</span><span>□</span><span>×</span></span>
+      </div>
+      <div class="panel-body">
+        <div class="nav" role="navigation" aria-label="Main">
+          <a href="/">🏠 Home</a>
+          <a href="/resume.html" aria-current="page">📄 Resume</a>
+          <a href="/#guestbook">✍️ Guestbook</a>
+        </div>
+
+        <header class="resume-header">
+          <h1>David Underwood</h1>
+          <p class="subtitle">
+            <span class="blink">★</span>
+            Professional Slope Whisperer / Cards, Kegs &amp; Commits
+            <span class="blink">★</span>
+          </p>
+          <p class="tagline">“If it slides, shuffles, ferments, or deploys, I’ve got notes.” <span style="color:#ff99ff;">(also covers discs now)</span></p>
+        </header>
+
+        <section class="section" aria-labelledby="exp-heading">
+          <h2 id="exp-heading">Professional Experience</h2>
+
+          <article class="job">
+            <h3><span class="role">Snowboard Coach</span> — Pats Peak &amp; Beyond</h3>
+            <ul class="metrics">
+              <li>Taught gravity how to negotiate; converted fear into speed with a straight face.</li>
+              <li>AASI-flavored chaos delivery: “that was totally intentional” certified.</li>
+              <li>Career KPI: 11,000+ “you’ve got this”s issued; 0 refunds on stoke.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3><span class="role">Pro Poker Operator</span> — Wherever the Felt Is Honest</h3>
+            <ul class="metrics">
+              <li>Looking calm while math screams; variance is just weather with a chip stack.</li>
+              <li>Career highlight: folding correctly and still telling the story like a hero.</li>
+              <li>Table presence rated “unreasonably serene” by three independent tilt monitors.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3><span class="role">Master Brewer</span> — Chief Flavor Negotiator</h3>
+            <ul class="metrics">
+              <li>Hops into personality; diagnoses beer by vibe before hydrometer ego arrives.</li>
+              <li>Brokered peace treaties between IPA bitterness and sessionable goodwill.</li>
+              <li>Ship rate: batches that taste like the story we told ourselves in the mash tun.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3><span class="role">Board Game General</span> — Tabletop Command</h3>
+            <ul class="metrics">
+              <li>Explaining rules nobody asked for; table politics with optional snacks.</li>
+              <li>Specialist in “one more round” diplomacy and house rules from 2014.</li>
+              <li>Win condition: everyone still friends when the box lid closes.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3><span class="role">Disc Golf Ace Hunter</span> — Chains as Therapy</h3>
+            <ul class="metrics">
+              <li>Specialties: tree negotiations, “that was the intended line,” walking fairways like a pilgrimage.</li>
+              <li>Plastic addiction professionally reframed as equipment R&amp;D.</li>
+              <li>Ace rate: classified; birdie optimism: publicly traded.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3><span class="role">Software Nerd</span> — Ships Code, Spares Prod</h3>
+            <ul class="metrics">
+              <li>Breaks production in spirit only; stack traces read as cryptic prophecy.</li>
+              <li>Commits with confidence, reverts with dignity, deploys with snacks nearby.</li>
+              <li>Preferred stack: whatever still builds after coffee and a pep talk.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section skills" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Core Competencies</h2>
+          <ul class="skill-list">
+            <li>Reading people</li>
+            <li>Reading green</li>
+            <li>Reading build logs</li>
+            <li>Reading the table</li>
+            <li>Reading the room</li>
+            <li>Reading the wind on hole 7</li>
+          </ul>
+        </section>
+
+        <section class="section edu" aria-labelledby="edu-heading">
+          <h2 id="edu-heading">Education</h2>
+          <ul class="edu-list">
+            <li>School of Hard Landings — B.S. in Controlled Chaos (honors, mostly upright)</li>
+            <li>University of Late-Night Sessions — Continuing studies in “one more hand / one more pour”</li>
+            <li>Disc Golf Community College — Audit only (chains elective; trees required)</li>
+          </ul>
+        </section>
+
+        <section class="section refs" aria-labelledby="refs-heading">
+          <h2 id="refs-heading">References</h2>
+          <p class="plain" style="padding-left:0; list-style:none;">Available upon successful bluff.</p>
+        </section>
+      </div>
+    </div>
+
+    <p class="footer">
+      © David Underwood ·
+      <a href="/">Home</a> ·
+      Best experienced with cookies (the edible kind) ·
+      <a href="https://github.com/sniperd2k/davidunderwood.net">source</a>
+    </p>
+  </div>
+</body>
+</html>
