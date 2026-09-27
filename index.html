@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>David Underwood — Snowboard / AASI / Pats Peak Crew</title>
-  <meta name="description" content="David Underwood — snowboarder, AASI, Pats Peak Crew (PPC). 90s vibes, shred forever." />
-  <meta name="theme-color" content="#0033cc" />
+  <meta name="description" content="David Underwood — snowboarder, AASI, Pats Peak Crew (PPC). MySpace-era vibes, shred forever." />
+  <meta name="theme-color" content="#1a0033" />
   <link rel="canonical" href="https://davidunderwood.net/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://davidunderwood.net/" />
@@ -13,357 +13,212 @@
   <meta property="og:description" content="Snowboarder · AASI · Pats Peak Crew. Welcome to the homepage." />
   <meta property="og:image" content="https://davidunderwood.net/assets/dave-snowboard.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49HF3RFVKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-49HF3RFVKP');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-49HF3RFVKP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-49HF3RFVKP');
+  </script>
+  <link rel="stylesheet" href="assets/myspace.css" />
   <style>
-    :root {
-      --bg: #000080;
-      --panel: #c0c0c0;
-      --panel-dark: #808080;
-      --hot: #ff00ff;
-      --lime: #00ff00;
-      --cyan: #00ffff;
-      --yellow: #ffff00;
-      --ink: #000000;
-      --link: #0000ee;
-      --visited: #551a8b;
-      --white: #ffffff;
-      --touch: 44px;
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(160px, 220px) 1fr;
+      gap: 10px;
     }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      marquee, .blink { animation: none !important; }
+    @media (max-width: 700px) {
+      .layout { grid-template-columns: 1fr; }
     }
-    body {
-      margin: 0;
-      font-family: "Comic Sans MS", "Comic Sans", "Trebuchet MS", Geneva, Tahoma, sans-serif;
-      color: var(--yellow);
-      background:
-        radial-gradient(circle at 20% 20%, #220066 0, transparent 40%),
-        radial-gradient(circle at 80% 0%, #004400 0, transparent 35%),
-        repeating-linear-gradient(45deg, #000066 0 12px, #000080 12px 24px);
-      min-height: 100vh;
-      line-height: 1.45;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--cyan); }
-    a:visited { color: #cc99ff; }
-    a:focus-visible, button:focus-visible {
-      outline: 3px solid var(--yellow);
-      outline-offset: 3px;
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    .skip {
-      position: absolute; left: -9999px; top: auto;
-      width: 1px; height: 1px; overflow: hidden;
-    }
-    .skip:focus {
-      position: fixed; left: 8px; top: 8px; z-index: 99;
-      width: auto; height: auto; padding: 10px 14px;
-      background: var(--yellow); color: #000; font-weight: bold;
-    }
-    .wrap {
-      width: min(920px, 100% - 1.25rem);
-      margin: 0.75rem auto 2rem;
-    }
-    .win95 {
-      background: var(--panel);
-      color: var(--ink);
-      border: 3px solid;
-      border-color: #ffffff #404040 #404040 #ffffff;
-      box-shadow: 4px 4px 0 #000;
-    }
-    .titlebar {
-      background: linear-gradient(90deg, #000080, #1084d0);
-      color: #fff;
-      font-weight: bold;
-      font-family: "MS Sans Serif", Tahoma, sans-serif;
-      font-size: 13px;
-      padding: 4px 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-    .titlebar .btns span {
-      display: inline-block;
-      width: 16px; height: 14px;
-      background: var(--panel);
-      border: 2px solid;
-      border-color: #fff #404040 #404040 #fff;
-      color: #000;
-      font-size: 10px;
-      line-height: 10px;
-      text-align: center;
-      margin-left: 2px;
-    }
-    .panel-body { padding: 12px; }
-    .hero-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #000;
-      color: var(--lime);
-      border: 4px ridge #ff00ff;
-    }
-    .hero-table td {
-      border: 2px solid #00ffff;
+    .side-box {
+      background: #e8d5ff;
+      border: 3px ridge #9900cc;
       padding: 8px;
-      vertical-align: top;
+      margin-bottom: 10px;
+      font-family: Tahoma, sans-serif;
+      font-size: 0.85rem;
+      color: #220044;
     }
+    .side-box h3 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      color: #990066;
+      border-bottom: 2px solid #ff66cc;
+      padding-bottom: 2px;
+    }
+    .mood { font-weight: bold; color: #cc0066; }
+    .contact-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .contact-table td { padding: 3px 2px; vertical-align: top; }
     .hero-shot {
       border: 6px groove #ff00aa;
       background: #111;
       padding: 4px;
+      position: relative;
+      box-shadow: 0 0 0 3px #00ffff, 4px 4px 0 #000;
     }
-    .hero-shot img {
-      width: 100%;
-      image-rendering: auto;
+    .hero-shot img { width: 100%; }
+    .hero-shot .zoom-hint {
+      position: absolute; right: 10px; bottom: 10px;
+      background: rgba(0,0,0,0.75); color: #ffff00;
+      font: bold 0.75rem Tahoma, sans-serif;
+      padding: 4px 8px; border: 2px outset #fff; pointer-events: none;
     }
+    .lb-open { cursor: zoom-in; display: block; }
     h1 {
       margin: 0 0 0.35rem;
       font-size: clamp(1.4rem, 5vw, 2.2rem);
       color: var(--hot);
       text-shadow: 2px 2px 0 #000, -1px -1px 0 #00ffff;
-      letter-spacing: 1px;
     }
-    .tagline {
-      margin: 0 0 0.75rem;
-      color: var(--yellow);
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    .blink {
-      animation: blink 1.1s step-start infinite;
-    }
-    @keyframes blink { 50% { opacity: 0; } }
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 0.75rem 0;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: var(--touch);
-      padding: 6px 12px;
-      border: 3px outset #fff;
-      background: linear-gradient(#ffff99, #ff9900);
-      color: #000;
-      font-weight: bold;
-      font-size: 0.85rem;
-      text-decoration: none;
-      box-shadow: 2px 2px 0 #000;
-    }
-    .badge:active { border-style: inset; }
-    .badge.blue { background: linear-gradient(#aaddff, #3366ff); color: #fff; }
-    .badge.green { background: linear-gradient(#ccffcc, #00aa00); }
-    .badge.pink { background: linear-gradient(#ffccff, #ff00aa); color: #fff; }
+    .tagline { margin: 0 0 0.75rem; color: var(--yellow); font-weight: bold; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.75rem 0; }
     .counter {
-      display: inline-block;
-      font-family: "Courier New", monospace;
-      background: #000;
-      color: #0f0;
-      border: 2px inset #808080;
-      padding: 4px 10px;
-      letter-spacing: 3px;
-      font-size: 1.1rem;
+      display: inline-block; font-family: "Courier New", monospace;
+      background: #000; color: #0f0; border: 2px inset #808080;
+      padding: 4px 10px; letter-spacing: 3px; font-size: 1.1rem;
     }
     .guestbook {
-      background: #fff8dc;
-      border: 4px double #800000;
-      padding: 10px;
-      margin-top: 10px;
-      color: #400000;
+      background: #fff8dc; border: 4px double #800000;
+      padding: 10px; margin-top: 10px; color: #400000;
       font-family: Georgia, "Times New Roman", serif;
     }
-    .guestbook h2 {
-      margin: 0 0 0.4rem;
-      font-size: 1.15rem;
-      color: #800000;
-    }
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0;
-    }
-    .nav a {
-      min-height: var(--touch);
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 14px;
-      background: #0000aa;
-      color: #ffff00 !important;
-      border: 3px outset #6699ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .nav a:active { border-style: inset; }
-    .footer {
-      margin-top: 1rem;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #aaddff;
-      font-family: Tahoma, sans-serif;
-    }
-    .footer a { color: #ffff66; }
-    marquee {
-      background: #000;
-      color: var(--lime);
-      border: 2px solid var(--hot);
-      padding: 4px 0;
-      font-family: "Courier New", monospace;
-      margin-bottom: 10px;
-    }
-
-    .crew-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: stretch;
-      margin-top: 10px;
-    }
+    .guestbook h2 { margin: 0 0 0.4rem; font-size: 1.15rem; color: #800000; }
+    .crew-strip { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; margin-top: 10px; }
     .crew-card {
-      flex: 1 1 160px;
-      max-width: 220px;
-      background: #111;
-      border: 4px groove #ff00aa;
-      padding: 4px;
-      cursor: zoom-in;
-      text-decoration: none;
-      color: #00ffff;
-      font-family: Tahoma, sans-serif;
-      font-size: 0.75rem;
-      text-align: center;
+      flex: 1 1 140px; max-width: 200px; background: #111;
+      border: 4px groove #ff00aa; padding: 4px; cursor: zoom-in;
+      text-decoration: none; color: #00ffff; font-family: Tahoma, sans-serif;
+      font-size: 0.75rem; text-align: center;
     }
-    .crew-card img {
-      width: 100%;
-      background: #fff;
+    .crew-card img { width: 100%; background: #fff; }
+    .crew-card .cap { display: block; padding: 4px 2px 2px; color: #ffff66; }
+    .top8 {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
     }
-    .crew-card:focus-visible {
-      outline: 3px solid var(--yellow);
-      outline-offset: 2px;
+    @media (max-width: 500px) { .top8 { grid-template-columns: repeat(2, 1fr); } }
+    .friend {
+      background: #fff; border: 2px solid #666; padding: 4px; text-align: center;
+      font-size: 0.7rem; color: #333;
     }
-    .crew-card .cap {
-      display: block;
-      padding: 4px 2px 2px;
-      color: #ffff66;
+    .friend .avatar {
+      width: 100%; aspect-ratio: 1; background:
+        linear-gradient(135deg, #ff00aa, #00ffff);
+      border: 2px inset #999; margin-bottom: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; color: #fff; text-shadow: 1px 1px 0 #000;
     }
-    .hero-shot { position: relative; }
-    .hero-shot .zoom-hint {
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
-      background: rgba(0,0,0,0.75);
-      color: #ffff00;
-      font: bold 0.75rem Tahoma, sans-serif;
-      padding: 4px 8px;
-      border: 2px outset #fff;
-      pointer-events: none;
+    .now-playing {
+      background: #000; color: #0f0; font-family: "Courier New", monospace;
+      border: 3px inset #808080; padding: 6px 8px; font-size: 0.8rem;
     }
-    .lb-open { cursor: zoom-in; }
+    .profile-song { color: #ff66ff; }
     .lightbox[hidden] { display: none !important; }
     .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
+      position: fixed; inset: 0; z-index: 1000;
       background: rgba(0,0,40,0.92);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       padding: 1rem;
     }
     .lightbox-dialog {
       position: relative;
-      max-width: min(960px, 100%);
+      max-width: min(920px, 100%);
       max-height: 92vh;
       background: var(--panel);
       border: 4px solid;
       border-color: #ffffff #404040 #404040 #ffffff;
-      box-shadow: 6px 6px 0 #000;
+      box-shadow: 6px 6px 0 #000, 0 0 0 4px #ff00ff;
       padding: 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+      display: flex; flex-direction: column; gap: 6px;
     }
     .lightbox-dialog img {
       max-height: min(78vh, 820px);
-      width: auto;
-      max-width: 100%;
-      margin: 0 auto;
-      background: #fff;
+      width: auto; max-width: 100%;
+      margin: 0 auto; background: #fff; cursor: pointer;
     }
     .lightbox-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
       background: linear-gradient(90deg, #000080, #1084d0);
-      color: #fff;
-      font: bold 13px Tahoma, sans-serif;
-      padding: 4px 8px;
+      color: #fff; font: bold 13px Tahoma, sans-serif; padding: 4px 8px;
     }
-    .lightbox-actions {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .lightbox-actions button {
-      min-height: var(--touch);
-      min-width: var(--touch);
-      padding: 6px 14px;
-      font: bold 0.9rem Tahoma, sans-serif;
-      background: var(--panel);
-      border: 3px outset #fff;
-      cursor: pointer;
-    }
-    .lightbox-actions button:active { border-style: inset; }
     .lightbox-caption {
-      margin: 0;
-      text-align: center;
-      font: 0.85rem Tahoma, sans-serif;
-      color: #003366;
+      margin: 0; text-align: center;
+      font: 0.85rem Tahoma, sans-serif; color: #003366;
     }
-    @media (max-width: 640px) {
-      .hero-table, .hero-table tbody, .hero-table tr, .hero-table td {
-        display: block;
-        width: 100%;
-      }
-      .wrap { width: min(100% - 0.75rem, 920px); }
-      body { font-size: 16px; }
+    .under-construction {
+      display: inline-block; background: #000; color: #ff0;
+      border: 2px dashed #f00; padding: 2px 8px; font-size: 0.75rem;
+      font-family: "Courier New", monospace;
     }
   </style>
 </head>
-<body>
+<body class="myspace">
   <a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
-    <marquee behavior="scroll" direction="left" scrollamount="5" aria-label="Site ticker">
-      ★ WELCOME TO DAVIDUNDERWOOD.NET ★ Snowboard · AASI · Pats Peak Crew / PPC ★ Best viewed in Netscape Navigator or Mobile Chrome ★ Sign the guestbook ★ Shred the gnar ★
+    <marquee behavior="scroll" direction="left" scrollamount="6" aria-label="Site ticker">
+      ★ WELCOME TO MY SPACE — wait, DAVIDUNDERWOOD.NET ★ Snowboard · AASI · Pats Peak Crew / PPC ★ Best viewed in Netscape Navigator or Mobile Chrome ★ Sign the guestbook ★ PPC 4 LIFE ★
     </marquee>
 
     <div class="win95" id="main">
       <div class="titlebar">
-        <span>🏂 davidunderwood.net — Home Page (est. 90s energy)</span>
+        <span>🏂 davidunderwood.net — MySpace cosplay (est. 90s / early 00s energy)</span>
         <span class="btns" aria-hidden="true"><span>_</span><span>□</span><span>×</span></span>
       </div>
       <div class="panel-body">
-        <table class="hero-table" role="presentation">
-          <tr>
-            <td style="width:58%">
+        <div class="nav" role="navigation" aria-label="Main">
+          <a href="./" aria-current="page">🏠 Home</a>
+          <a href="resume.html">📄 Resume</a>
+          <a href="#crew">💀 Crew</a>
+          <a href="guestbook.aspx">✍️ Guestbook</a>
+          <a href="#about">ℹ About</a>
+        </div>
+
+        <div class="layout">
+          <aside>
+            <div class="side-box">
+              <h3>David Underwood</h3>
+              <p class="mood">Mood: <span class="sparkle">stoked</span> 🏂</p>
+              <p>Gender: shred<br />Age: forever junior<br />Location: chairlift line</p>
+              <p class="under-construction">*~* under construction forever *~*</p>
+            </div>
+            <div class="side-box">
+              <h3>Contacting David</h3>
+              <table class="contact-table" role="presentation">
+                <tr><td>📨</td><td>Send vibe mail (guestbook)</td></tr>
+                <tr><td>Forward</td><td>Yell across the park</td></tr>
+                <tr><td>Add</td><td>PPC 4 LIFE</td></tr>
+                <tr><td>Block</td><td>People who dual-plank shame</td></tr>
+              </table>
+            </div>
+            <div class="side-box">
+              <h3>David’s Interests</h3>
+              <p><b>General:</b> edges, snacks, AASI clinics, disc golf chaos</p>
+              <p><b>Music:</b> whatever the lodge stereo fears</p>
+              <p><b>Movies:</b> anything with a sick POV edit</p>
+              <p><b>Heroes:</b> Pats Peak Crew</p>
+            </div>
+            <div class="side-box">
+              <h3>Top 8 (imaginary)</h3>
+              <div class="top8" aria-label="Decorative top friends">
+                <div class="friend"><div class="avatar">🏂</div>PPC_Shredder</div>
+                <div class="friend"><div class="avatar">❄</div>AASI_alum</div>
+                <div class="friend"><div class="avatar">🏔</div>ChairLiftDan</div>
+                <div class="friend"><div class="avatar">🟢</div>DiscGolfDeb</div>
+                <div class="friend"><div class="avatar">🃏</div>FeltWhisper</div>
+                <div class="friend"><div class="avatar">🍺</div>HopDiplomat</div>
+                <div class="friend"><div class="avatar">🎲</div>RuleExplainer</div>
+                <div class="friend"><div class="avatar">💀</div>PPC Emblem</div>
+              </div>
+            </div>
+          </aside>
+
+          <section>
+            <div class="now-playing" aria-label="Fake profile song">
+              ▶ Now Playing: <span class="profile-song">“PPC Anthem (MIDI loft remix)”</span> — loop forever
+            </div>
+
+            <div style="margin-top:10px; background:#000; border:4px ridge #ff00ff; padding:8px;">
               <figure class="hero-shot">
-                <a class="lb-open" href="assets/dave-snowboard.jpg" data-lb-index="1" aria-label="Open shred photo in lightbox">
+                <a class="lb-open" href="assets/dave-snowboard.jpg" data-lb="shred" aria-label="Open shred photo in lightbox">
                   <picture>
                     <source type="image/webp" srcset="assets/dave-snowboard.webp" />
                     <img
@@ -379,94 +234,91 @@
                 </a>
               </figure>
               <p style="margin:8px 0 0; font-size:0.8rem; color:#00ffff; font-family:Tahoma,sans-serif;">
-                ▲ Personal photo — Pats Peak energy. No Unsplash. Just shred. Click for Crew lightbox.
+                ▲ Personal photo — Pats Peak energy. No stock photos. Just shred.
               </p>
-            </td>
-            <td>
-              <h1>David Underwood</h1>
+            </div>
+
+            <div style="background:#000; color:#0f0; border:3px solid #00ffff; padding:10px; margin-top:10px;">
+              <h1 class="sparkle">David Underwood</h1>
               <p class="tagline">
                 <span class="blink">★</span> Snowboarder · AASI · Pats Peak Crew (PPC) <span class="blink">★</span>
               </p>
-              <p style="color:#ffffff; font-family:Tahoma,sans-serif; font-size:0.95rem;">
-                You’ve reached the official corner of the internet for carving, teaching, and hanging with the <b style="color:#ff00ff;">Pats Peak Crew</b>.
-                Lace up. Hit refresh. Stay stoked.
+              <p style="color:#fff; font-family:Tahoma,sans-serif; font-size:0.95rem;">
+                You’ve reached the official corner of the internet for carving, teaching, and hanging with the
+                <b style="color:#ff00ff;">Pats Peak Crew</b>. Lace up. Hit refresh. Stay stoked.
               </p>
-              <div class="badges" aria-label=" cred badges">
-                <span class="badge blue">❄ AASI</span>
-                <span class="badge pink">🏔 Pats Peak Crew</span>
-                <span class="badge green">PPC 4 LIFE</span>
+              <div class="badges" aria-label="cred badges">
+                <span class="badge blue" role="button" tabindex="0">❄ AASI</span>
+                <button type="button" class="badge pink" id="btn-crew" aria-haspopup="dialog" aria-controls="lightbox">
+                  🏔 Pats Peak Crew
+                </button>
+                <a class="badge green" id="btn-ppc4life"
+                   href="https://www.patspeak.com/the-mountain/services/chandler-pelletier-scholarship/"
+                   target="_blank" rel="noopener noreferrer">PPC 4 LIFE</a>
                 <span class="badge">UNDER CONSTRUCTION? NAH — LIVE</span>
               </div>
               <p style="font-family:Tahoma,sans-serif; color:#ccc; margin:0.5rem 0;">
                 You are visitor #<span class="counter" title="decorative 90s hit counter">0001337</span>
               </p>
-              <div class="nav" role="navigation" aria-label="Main">
-                <a href="resume.html">📄 Resume</a>
-                <a href="#crew">💀 Crew</a>
-                <a href="#guestbook">✍️ Guestbook</a>
-                <a href="#about">ℹ About</a>
+            </div>
+
+            <div id="crew" class="guestbook" style="background:#1a001a; border-color:#ff00ff; color:#ffccff;">
+              <h2 style="color:#ff66ff;">💀 Pats Peak Crew · lightbox</h2>
+              <p style="margin:0 0 0.5rem; font-family:Tahoma,sans-serif; color:#eee;">
+                Tap the <b>Pats Peak Crew</b> badge (or the emblem below) for the official PPC mark.
+                Overlay / image click dismisses. Esc works too.
+              </p>
+              <div class="crew-strip" id="crew-gallery">
+                <a class="crew-card lb-open" href="assets/snowboard_PPC.jpg" data-lb="ppc" aria-label="Open PPC crew emblem in lightbox">
+                  <picture>
+                    <source type="image/webp" srcset="assets/snowboard_PPC-thumb.webp" />
+                    <img
+                      src="assets/snowboard_PPC-thumb.jpg"
+                      width="320"
+                      height="214"
+                      alt="Pats Peak Crew emblem — skull with PPC on the forehead and crossed snowboards"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                  <span class="cap">PPC emblem ★</span>
+                </a>
+                <a class="crew-card lb-open" href="assets/dave-snowboard.jpg" data-lb="shred" aria-label="Open shred photo in lightbox">
+                  <picture>
+                    <source type="image/webp" srcset="assets/dave-snowboard.webp" />
+                    <img
+                      src="assets/dave-snowboard.jpg"
+                      width="320"
+                      height="213"
+                      alt="David Underwood mid-air on a snowboard"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                  <span class="cap">Shred shot ★</span>
+                </a>
               </div>
-            </td>
-          </tr>
-        </table>
+            </div>
 
+            <div id="about" class="guestbook" style="background:#e8f7ff; border-color:#003366; color:#003366;">
+              <h2 style="color:#003366;">About this site</h2>
+              <p style="margin:0; font-family:Tahoma,sans-serif;">
+                Built with tables-in-spirit, Comic Sans, and questionable fonts — on purpose.
+                Mobile Chrome &amp; Safari still work (touch targets ≥44px).
+                Theme: snowboarding, instructor life, and Pats Peak Crew / PPC vibes.
+              </p>
+            </div>
 
-        <div id="crew" class="guestbook" style="background:#1a001a; border-color:#ff00ff; color:#ffccff;">
-          <h2 style="color:#ff66ff;">💀 Pats Peak Crew · lightbox</h2>
-          <p style="margin:0 0 0.5rem; font-family:Tahoma,sans-serif; color:#eee;">
-            Official PPC mark + the shred shot. Click either thumb — arrow keys / Esc work in the lightbox.
-          </p>
-          <div class="crew-strip" id="crew-gallery">
-            <a class="crew-card lb-open" href="assets/snowboard_PPC.jpg" data-lb-index="0" aria-label="Open PPC crew emblem in lightbox">
-              <picture>
-                <source type="image/webp" srcset="assets/snowboard_PPC-thumb.webp" />
-                <img
-                  src="assets/snowboard_PPC-thumb.jpg"
-                  width="320"
-                  height="214"
-                  alt="Pats Peak Crew emblem — skull with PPC on the forehead and crossed snowboards"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-              <span class="cap">PPC emblem ★</span>
-            </a>
-            <a class="crew-card lb-open" href="assets/dave-snowboard.jpg" data-lb-index="1" aria-label="Open shred photo in lightbox">
-              <picture>
-                <source type="image/webp" srcset="assets/dave-snowboard.webp" />
-                <img
-                  src="assets/dave-snowboard.jpg"
-                  width="320"
-                  height="213"
-                  alt="David Underwood mid-air on a snowboard"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-              <span class="cap">Shred shot ★</span>
-            </a>
-          </div>
-        </div>
-
-        <div id="about" class="guestbook" style="background:#e8f7ff; border-color:#003366; color:#003366;">
-          <h2 style="color:#003366;">About this site</h2>
-          <p style="margin:0; font-family:Tahoma,sans-serif;">
-            Built with tables, borders, and questionable fonts — on purpose.
-            Mobile Chrome &amp; Safari still work (we measured the touch targets and everything).
-            Theme: snowboarding, instructor life, and the Pats Peak Crew / PPC crew vibes.
-          </p>
-        </div>
-
-        <div id="guestbook" class="guestbook">
-          <h2>📖 Guestbook <small>(vibes only — no CGI form… yet)</small></h2>
-          <p style="margin:0 0 0.5rem; font-family:Tahoma,sans-serif; font-size:0.9rem;">
-            <b>SkiBum99 wrote:</b> “Sick grab bro!!1!” — <i>2/14/1999</i><br />
-            <b>PPC_Shredder wrote:</b> “See you on the park.” — <i>today-ish</i><br />
-            <b>AASI_alum wrote:</b> “Teach the next generation 🏂” — <i>whenever</i>
-          </p>
-          <p style="margin:0; font-family:Tahoma,sans-serif; font-size:0.85rem;">
-            Want a real entry? Yell across the lift line — or leave vibes in the guestbook forever.
-          </p>
+            <div id="guestbook" class="guestbook">
+              <h2>📖 Guestbook <small>(real form — not CGI cosplay)</small></h2>
+              <p style="margin:0 0 0.5rem; font-family:Tahoma,sans-serif; font-size:0.9rem;">
+                Sign the lodge book, solve a tiny math problem, and skip the bot life.
+              </p>
+              <p style="margin:0;">
+                <a class="badge" href="guestbook.aspx">✍️ Open guestbook</a>
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -474,64 +326,64 @@
     <p class="footer">
       © David Underwood ·
       <a href="resume.html">Resume</a> ·
+      <a href="guestbook.aspx">Guestbook</a> ·
       Best experienced with cookies (the edible kind) ·
       <a href="https://github.com/sniperd2k/davidunderwood.net">source</a>
     </p>
   </div>
 
   <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Crew photo lightbox">
-    <div class="lightbox-dialog">
+    <div class="lightbox-dialog" id="lightbox-dialog">
       <div class="lightbox-bar">
         <span id="lb-title">Crew lightbox</span>
-        <button type="button" id="lb-close-x" aria-label="Close lightbox" style="width:22px;height:18px;line-height:14px;padding:0;background:#c0c0c0;border:2px solid;border-color:#fff #404040 #404040 #fff;font-weight:bold;cursor:pointer;">×</button>
+        <button type="button" id="lb-close-x" aria-label="Close lightbox"
+          style="width:22px;height:18px;line-height:14px;padding:0;background:#c0c0c0;border:2px solid;border-color:#fff #404040 #404040 #fff;font-weight:bold;cursor:pointer;">×</button>
       </div>
-      <img id="lb-img" src="" alt="" width="1404" height="940" />
+      <img id="lb-img" src="" alt="" width="1404" height="940" title="Click image to close" />
       <p class="lightbox-caption" id="lb-caption"></p>
-      <div class="lightbox-actions">
-        <button type="button" id="lb-prev" aria-label="Previous image">◀ Prev</button>
-        <button type="button" id="lb-close" aria-label="Close lightbox">Close</button>
-        <button type="button" id="lb-next" aria-label="Next image">Next ▶</button>
-      </div>
     </div>
   </div>
+
+  <script src="assets/myspace-audio.js"></script>
   <script>
   (function () {
-    var items = [
-      {
+    var items = {
+      ppc: {
         src: "assets/snowboard_PPC.webp",
         fallback: "assets/snowboard_PPC.jpg",
         alt: "Pats Peak Crew emblem — skull with PPC on the forehead and crossed snowboards",
         caption: "Pats Peak Crew (PPC) — skull & crossed boards"
       },
-      {
+      shred: {
         src: "assets/dave-snowboard.webp",
         fallback: "assets/dave-snowboard.jpg",
         alt: "David Underwood mid-air on a snowboard, orange Never Summer board against an overcast New Hampshire sky",
         caption: "Personal shred shot — Pats Peak energy"
       }
-    ];
+    };
     var lb = document.getElementById("lightbox");
     var img = document.getElementById("lb-img");
     var cap = document.getElementById("lb-caption");
     var title = document.getElementById("lb-title");
-    var idx = 0;
     var lastFocus = null;
+    var current = "ppc";
 
-    function show(i) {
-      idx = (i + items.length) % items.length;
-      var it = items[idx];
+    function show(key) {
+      current = items[key] ? key : "ppc";
+      var it = items[current];
       img.onerror = function () { img.onerror = null; img.src = it.fallback; };
       img.src = it.src;
       img.alt = it.alt;
-      cap.textContent = it.caption + " (" + (idx + 1) + "/" + items.length + ")";
-      title.textContent = "Crew lightbox — " + (idx + 1) + "/" + items.length;
+      cap.textContent = it.caption + " — click image or overlay to close";
+      title.textContent = "Crew lightbox — " + current.toUpperCase();
     }
-    function open(i) {
+    function open(key) {
       lastFocus = document.activeElement;
-      show(i);
+      show(key);
       lb.hidden = false;
       document.body.style.overflow = "hidden";
-      document.getElementById("lb-close").focus();
+      document.getElementById("lb-close-x").focus();
+      if (window.DUAudio) DUAudio.play(key === "ppc" ? "crew" : "pop");
     }
     function close() {
       lb.hidden = true;
@@ -542,23 +394,30 @@
     document.querySelectorAll(".lb-open").forEach(function (el) {
       el.addEventListener("click", function (e) {
         e.preventDefault();
-        var n = parseInt(el.getAttribute("data-lb-index") || "0", 10);
-        open(n);
+        open(el.getAttribute("data-lb") || "ppc");
       });
     });
-    document.getElementById("lb-prev").addEventListener("click", function () { show(idx - 1); });
-    document.getElementById("lb-next").addEventListener("click", function () { show(idx + 1); });
-    document.getElementById("lb-close").addEventListener("click", close);
+    var crewBtn = document.getElementById("btn-crew");
+    function openCrew() { open("ppc"); }
+    crewBtn.addEventListener("click", openCrew);
+    crewBtn.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openCrew(); }
+    });
+
+    document.getElementById("btn-ppc4life").addEventListener("click", function () {
+      if (window.DUAudio) DUAudio.play("success");
+    });
+
     document.getElementById("lb-close-x").addEventListener("click", close);
-    lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+    img.addEventListener("click", close);
+    lb.addEventListener("click", function (e) {
+      if (e.target === lb) close();
+    });
     document.addEventListener("keydown", function (e) {
       if (lb.hidden) return;
       if (e.key === "Escape") close();
-      else if (e.key === "ArrowLeft") show(idx - 1);
-      else if (e.key === "ArrowRight") show(idx + 1);
     });
   })();
   </script>
-
 </body>
 </html>

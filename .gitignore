@@ -1,3 +1,7 @@
 aspnet_client/
 .DS_Store
 Thumbs.db
+
+App_Data/guestbook.json
+App_Data/ratelimit.json
+App_Data/*.tmp
