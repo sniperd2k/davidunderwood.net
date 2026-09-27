@@ -1,4 +1,4 @@
-<%@ Page Language="C#" EnableViewState="false" AutoEventWireup="false" %>
+﻿<%@ Page Language="C#" EnableViewState="false" AutoEventWireup="false" ResponseEncoding="utf-8" Culture="en-US" UICulture="en-US" %>
 <%@ Import Namespace="System.IO" %>
 <%@ Import Namespace="System.Text" %>
 <%@ Import Namespace="System.Text.RegularExpressions" %>
